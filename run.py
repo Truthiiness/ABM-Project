@@ -9,11 +9,14 @@ from Model import Model
 import matplotlib.pyplot as plt
 
 model = Model(10)
-for i in range(100):
+for i in range(10):
     model.step()
     
-agent_wealth = [a.wealth for a in model.schedule.agents]
-plt.hist(agent_wealth)
+agent_trait1 = [a.trait1 for a in model.schedule.agents]
+plt.hist(agent_trait1)
 
-agent_value = [a.value for a in model.schedule.agents]
-plt.hist(agent_value)
+agent_trait2 = [a.trait2 for a in model.schedule.agents]
+plt.hist(agent_trait2)
+
+agent_trait3 = [a.trait3 for a in model.schedule.agents]
+plt.hist(agent_trait3)
