@@ -6,7 +6,7 @@ Created on Sat Mar  7 16:01:55 2020
 """
 
 from mesa import Model
-from Agent import Agent1AA
+from Agent import Agent1AA, Agent1BB
 from mesa.time import RandomActivation
 
 class Model(Model):
@@ -18,6 +18,8 @@ class Model(Model):
         for i in range(self.num_agents):
             a = Agent1AA(i, self)
             self.schedule.add(a)
+            b = Agent1BB(i, self)
+            self.schedule.add(b)
 
     def step(self):
         '''Advance the model by one step.'''
