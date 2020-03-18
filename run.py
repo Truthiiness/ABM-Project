@@ -6,9 +6,7 @@ Created on Sat Mar  7 16:05:15 2020
 """
 
 from Model import Model
-import matplotlib.pyplot as plt
 
-model = Model(10)
+model = Model(5,5)
 for i in range(10):
     model.step()
-
