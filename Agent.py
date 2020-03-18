@@ -273,8 +273,8 @@ class Agent1A(Org):
             self.trait12 += 0.5               
             
 class Agent1B(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -393,8 +393,8 @@ class Agent1B(Org):
                 self.trait12 += 0.5   
                 
 class Agent1C(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -513,8 +513,8 @@ class Agent1C(Org):
                 self.trait12 += 0.5   
                 
 class Agent1D(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -633,8 +633,8 @@ class Agent1D(Org):
                 self.trait12 += 0.5   
                 
 class Agent1E(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 0
         self.trait2 = 0
         self.trait3 = 0
@@ -753,8 +753,8 @@ class Agent1E(Org):
                 self.trait12 += 0.5   
                 
 class Agent1F(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 0
         self.trait2 = 0
         self.trait3 = 0
@@ -873,8 +873,8 @@ class Agent1F(Org):
                 self.trait12 += 0.5   
                 
 class Agent1G(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 0
         self.trait2 = 0
         self.trait3 = 0
@@ -993,8 +993,8 @@ class Agent1G(Org):
                 self.trait12 += 0.5   
                 
 class Agent1H(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1113,8 +1113,8 @@ class Agent1H(Org):
                 self.trait12 += 0.5   
                 
 class Agent1I(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1233,8 +1233,8 @@ class Agent1I(Org):
                 self.trait12 += 0.5   
                 
 class Agent1J(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1353,8 +1353,8 @@ class Agent1J(Org):
                 self.trait12 += 0.5   
                 
 class Agent1K(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1473,8 +1473,8 @@ class Agent1K(Org):
                 self.trait12 += 0.5   
                 
 class Agent1L(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1593,8 +1593,8 @@ class Agent1L(Org):
                 self.trait12 += 0.5   
                 
 class Agent1M(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1713,8 +1713,8 @@ class Agent1M(Org):
                 self.trait12 += 0.5   
                 
 class Agent1N(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1833,8 +1833,8 @@ class Agent1N(Org):
                 self.trait12 += 0.5   
                 
 class Agent1O(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -1953,8 +1953,8 @@ class Agent1O(Org):
                 self.trait12 += 0.5   
                 
 class Agent1P(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -2073,8 +2073,8 @@ class Agent1P(Org):
                 self.trait12 += 0.5   
                 
 class Agent1Q(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -2193,8 +2193,8 @@ class Agent1Q(Org):
                 self.trait12 += 0.5   
                 
 class Agent1R(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 100
         self.trait2 = 100
         self.trait3 = 100
@@ -2313,8 +2313,8 @@ class Agent1R(Org):
                 self.trait12 += 0.5   
                 
 class Agent1S(Org):
-    def __init__(self, unique_id, model):
-        super().__init__(unique_id, model)
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
         self.trait1 = 0
         self.trait2 = 0
         self.trait3 = 0

@@ -25,3 +25,5 @@ agent_trait9 = [a.trait9 for a in model.schedule.agents]
 agent_trait10 = [a.trait10 for a in model.schedule.agents]
 agent_trait11 = [a.trait11 for a in model.schedule.agents]
 agent_trait12 = [a.trait12 for a in model.schedule.agents]
+
+print(agent_trait1)

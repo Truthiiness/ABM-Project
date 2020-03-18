@@ -30,6 +30,7 @@ class Model(Model):
         self.width = width
         self.initial_Agent2 = initial_Agent2
         self.initial_Agent1A = initial_Agent1A
+        self.initial_Agent1B = initial_Agent1B
         self.schedule = RandomActivationByOrg(self)
         self.grid = (MultiGrid(self.height, self.width, torus=True))
         self.datacollector = DataCollector(
