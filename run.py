@@ -9,13 +9,17 @@ from Model import Model
 from Agent import (Agent2, Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S)
+import matplotlib.pyplot as plt
+import numpy as np
 
-model = Model(20,20)
+model = Model(100,100)
 for i in range(10):
     model.step()
 
-#Still here in case I need it later, but I don't need it for now. The individual
-#agent traits are more useful for what I need.
+#Still here in case I need it later, but I don't need it at the moment. The individual
+#agent traits are more useful for what I'm looking to do.
+
+#agent_types = [a for a in model.schedule.agents_by_org]
 
 #all_agents_trait1 = [a.trait1 for a in model.schedule.agents]
 #all_agents_trait2 = [a.trait2 for a in model.schedule.agents]
@@ -43,6 +47,13 @@ agent2_trait10 = [a.trait10 for a in model.schedule.agents if isinstance(a, Agen
 agent2_trait11 = [a.trait11 for a in model.schedule.agents if isinstance(a, Agent2)]
 agent2_trait12 = [a.trait12 for a in model.schedule.agents if isinstance(a, Agent2)]
 
+agent2_avg_traits = [np.mean(agent2_trait1),np.mean(agent2_trait2),np.mean(agent2_trait3),
+np.mean(agent2_trait4),np.mean(agent2_trait5),np.mean(agent2_trait6),
+np.mean(agent2_trait7),np.mean(agent2_trait8),np.mean(agent2_trait9),
+np.mean(agent2_trait10),np.mean(agent2_trait11),np.mean(agent2_trait12)]
+
+print("Average Agent2 traits are " +str(agent2_avg_traits))
+
 agent1a_trait1 = [a.trait1 for a in model.schedule.agents if isinstance(a, Agent1A)]
 agent1a_trait2 = [a.trait2 for a in model.schedule.agents if isinstance(a, Agent1A)]
 agent1a_trait3 = [a.trait3 for a in model.schedule.agents if isinstance(a, Agent1A)]
@@ -55,6 +66,13 @@ agent1a_trait9 = [a.trait9 for a in model.schedule.agents if isinstance(a, Agent
 agent1a_trait10 = [a.trait10 for a in model.schedule.agents if isinstance(a, Agent1A)]
 agent1a_trait11 = [a.trait11 for a in model.schedule.agents if isinstance(a, Agent1A)]
 agent1a_trait12 = [a.trait12 for a in model.schedule.agents if isinstance(a, Agent1A)]
+
+agent1a_avg_traits = [np.mean(agent1a_trait1),np.mean(agent1a_trait2),np.mean(agent1a_trait3),
+np.mean(agent1a_trait4),np.mean(agent1a_trait5),np.mean(agent1a_trait6),
+np.mean(agent1a_trait7),np.mean(agent1a_trait8),np.mean(agent1a_trait9),
+np.mean(agent1a_trait10),np.mean(agent1a_trait11),np.mean(agent1a_trait12)]
+
+print("Average Agent1A traits are " +str(agent1a_avg_traits))
 
 agent1b_trait1 = [a.trait1 for a in model.schedule.agents if isinstance(a, Agent1B)]
 agent1b_trait2 = [a.trait2 for a in model.schedule.agents if isinstance(a, Agent1B)]
@@ -69,6 +87,13 @@ agent1b_trait10 = [a.trait10 for a in model.schedule.agents if isinstance(a, Age
 agent1b_trait11 = [a.trait11 for a in model.schedule.agents if isinstance(a, Agent1B)]
 agent1b_trait12 = [a.trait12 for a in model.schedule.agents if isinstance(a, Agent1B)]
 
+agent1b_avg_traits = [np.mean(agent1b_trait1),np.mean(agent1b_trait2),np.mean(agent1b_trait3),
+np.mean(agent1b_trait4),np.mean(agent1b_trait5),np.mean(agent1b_trait6),
+np.mean(agent1b_trait7),np.mean(agent1b_trait8),np.mean(agent1b_trait9),
+np.mean(agent1b_trait10),np.mean(agent1b_trait11),np.mean(agent1b_trait12)]
+
+print("Average Agent1B traits are " +str(agent1b_avg_traits))
+
 agent1c_trait1 = [a.trait1 for a in model.schedule.agents if isinstance(a, Agent1C)]
 agent1c_trait2 = [a.trait2 for a in model.schedule.agents if isinstance(a, Agent1C)]
 agent1c_trait3 = [a.trait3 for a in model.schedule.agents if isinstance(a, Agent1C)]
@@ -81,6 +106,15 @@ agent1c_trait9 = [a.trait9 for a in model.schedule.agents if isinstance(a, Agent
 agent1c_trait10 = [a.trait10 for a in model.schedule.agents if isinstance(a, Agent1C)]
 agent1c_trait11 = [a.trait11 for a in model.schedule.agents if isinstance(a, Agent1C)]
 agent1c_trait12 = [a.trait12 for a in model.schedule.agents if isinstance(a, Agent1C)]
+
+agent1c_avg_traits = [np.mean(agent1c_trait1),np.mean(agent1c_trait2),np.mean(agent1c_trait3),
+np.mean(agent1c_trait4),np.mean(agent1c_trait5),np.mean(agent1c_trait6),
+np.mean(agent1c_trait7),np.mean(agent1c_trait8),np.mean(agent1c_trait9),
+np.mean(agent1c_trait10),np.mean(agent1c_trait11),np.mean(agent1c_trait12)]
+
+print("Average Agent1C traits are " +str(agent1c_avg_traits))
+
+#Stopped here 192130MAR20
 
 agent1d_trait1 = [a.trait1 for a in model.schedule.agents if isinstance(a, Agent1D)]
 agent1d_trait2 = [a.trait2 for a in model.schedule.agents if isinstance(a, Agent1D)]
