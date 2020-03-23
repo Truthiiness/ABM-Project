@@ -13,7 +13,7 @@ from mesa.space import MultiGrid
 from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
-from Network import G
+from Network import Network
 
 #Currently random movement mirrored from the wolf/sheep model. Working on
 #getting the NetworkGrid to work
