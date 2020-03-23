@@ -6,13 +6,41 @@ Created on Sat Mar  7 16:01:55 2020
 """
 
 from mesa import Model
+from mesa.time import RandomActivation
+from collections import defaultdict
 from mesa.space import MultiGrid
 from Agent import (Agent2, Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S)
-from Scheduler import RandomActivationByOrg
 
 #Attempt at getting just 2 different types of agents to interact using the same method as the wolf/sheep model.
+
+class RandomActivationByOrg(RandomActivation):
+
+    def __init__(self, model):
+        super().__init__(model)
+        self.agents_by_org = defaultdict(dict)
+
+    def add(self, agent):       
+        self._agents[agent.unique_id] = agent
+        agent_class = type(agent)
+        self.agents_by_org[agent_class][agent.unique_id] = agent
+
+    def step(self, by_org=True):
+
+        if by_org:
+            for agent_class in self.agents_by_org:
+                self.step_org(agent_class)
+            self.steps += 1
+            self.time += 1
+        else:
+            super().step()
+
+    def step_org(self, org):
+        agent_keys = list(self.agents_by_org[org].keys())
+        self.model.random.shuffle(agent_keys)
+        for agent_key in agent_keys:
+            self.agents_by_org[org][agent_key].step()
 
 class Model(Model):
     height = 20

@@ -34,6 +34,3 @@ class RandomActivationByOrg(RandomActivation):
         self.model.random.shuffle(agent_keys)
         for agent_key in agent_keys:
             self.agents_by_org[org][agent_key].step()
-    
-    def get_org_count(self, org_class):    
-        return len(self.agents_by_org[org_class].values())
