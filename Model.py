@@ -8,12 +8,15 @@ Created on Sat Mar  7 16:01:55 2020
 from mesa import Model
 from mesa.time import RandomActivation
 from collections import defaultdict
+from mesa.space import NetworkGrid
 from mesa.space import MultiGrid
-from Agent import (Agent2, Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
+from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
-Agent1P, Agent1Q, Agent1R, Agent1S)
+Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
+from Network import G
 
-#Attempt at getting just 2 different types of agents to interact using the same method as the wolf/sheep model.
+#Currently random movement mirrored from the wolf/sheep model. Working on
+#getting the NetworkGrid to work
 
 class RandomActivationByOrg(RandomActivation):
 
@@ -42,11 +45,11 @@ class RandomActivationByOrg(RandomActivation):
         for agent_key in agent_keys:
             self.agents_by_org[org][agent_key].step()
 
+
 class Model(Model):
     height = 20
     width = 20
     
-    initial_Agent2 = 10
     initial_Agent1A = 10
     initial_Agent1B = 10
     initial_Agent1C = 10
@@ -66,18 +69,19 @@ class Model(Model):
     initial_Agent1Q = 10
     initial_Agent1R = 10
     initial_Agent1S = 10
-        
-    def __init__(self, height, width, initial_Agent2=10, initial_Agent1A = 10,
-                 initial_Agent1B = 10,initial_Agent1C = 10,initial_Agent1D = 10,
-                 initial_Agent1E = 10,initial_Agent1F = 10,initial_Agent1G = 10,
-                 initial_Agent1H = 10,initial_Agent1I = 10,initial_Agent1J = 10,
-                 initial_Agent1K = 10,initial_Agent1L = 10,initial_Agent1M = 10,
-                 initial_Agent1N = 10,initial_Agent1O = 10,initial_Agent1P = 10,
-                 initial_Agent1Q = 10,initial_Agent1R = 10,initial_Agent1S = 10):
+    initial_Agent2A = 10
+    
+    def __init__(self, height, width, initial_Agent1A = 10, initial_Agent1B = 10,
+                 initial_Agent1C = 10, initial_Agent1D = 10, initial_Agent1E = 10,
+                 initial_Agent1F = 10, initial_Agent1G = 10, initial_Agent1H = 10,
+                 initial_Agent1I = 10, initial_Agent1J = 10, initial_Agent1K = 10,
+                 initial_Agent1L = 10, initial_Agent1M = 10, initial_Agent1N = 10,
+                 initial_Agent1O = 10, initial_Agent1P = 10, initial_Agent1Q = 10,
+                 initial_Agent1R = 10, initial_Agent1S = 10, initial_Agent2A=10):
         super().__init__()
         self.height = height
         self.width = width
-        self.initial_Agent2 = initial_Agent2
+
         self.initial_Agent1A = initial_Agent1A
         self.initial_Agent1B = initial_Agent1B
         self.initial_Agent1C = initial_Agent1C
@@ -97,16 +101,15 @@ class Model(Model):
         self.initial_Agent1Q = initial_Agent1Q
         self.initial_Agent1R = initial_Agent1R
         self.initial_Agent1S = initial_Agent1S
+        self.initial_Agent2A = initial_Agent2A
         self.schedule = RandomActivationByOrg(self)
         self.grid = (MultiGrid(self.height, self.width, torus=True))
-    
-        for i in range(self.initial_Agent2):
-            x = self.random.randrange(self.width)
-            y = self.random.randrange(self.height)
-            agent2 = Agent2(self.next_id(),(x,y), self, True)
-            self.grid.place_agent(agent2, (x,y))
-            self.schedule.add(agent2)
-            
+        
+        #Work in progress
+        
+        #self.G = 
+        #self.grid = NetworkGrid(self.G)
+                           
         for i in range(self.initial_Agent1A):
             x = self.random.randrange(self.width)
             y = self.random.randrange(self.height)
@@ -239,6 +242,14 @@ class Model(Model):
             agent1s = Agent1S(self.next_id(),(x,y), self, True)
             self.grid.place_agent(agent1s, (x,y))
             self.schedule.add(agent1s)
+
+        for i in range(self.initial_Agent2A):
+            x = self.random.randrange(self.width)
+            y = self.random.randrange(self.height)
+            agent2a = Agent2A(self.next_id(),(x,y), self, True)
+            self.grid.place_agent(agent2a, (x,y))
+            self.schedule.add(agent2a)
+            
         self.running = True
         
     def step(self):       

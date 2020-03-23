@@ -140,23 +140,6 @@ class Org(Agent):
         if self.trait12>0:
             self.trait12 += 0.5
 
-class Agent2(Org):
-    #placeholder agent for testing purposes
-    def __init__(self, unique_id, pos, model, moore):
-        super().__init__(unique_id, pos, model, moore=moore)
-        self.trait1 = 20
-        self.trait2 = 20
-        self.trait3 = 20
-        self.trait4 = 20
-        self.trait5 = 20
-        self.trait6 = 20
-        self.trait7 = 20
-        self.trait8 = 20
-        self.trait9 = 20
-        self.trait10 = 20
-        self.trait11 = 20
-        self.trait12 = 20
-
 class Agent1A(Org):
     def __init__(self, unique_id, pos, model, moore):
         super().__init__(unique_id, pos, model, moore=moore)
@@ -460,3 +443,20 @@ class Agent1S(Org):
         self.trait10 = 100
         self.trait11 = 100
         self.trait12 = 100
+        
+class Agent2A(Org):
+    #placeholder agent for testing purposes
+    def __init__(self, unique_id, pos, model, moore):
+        super().__init__(unique_id, pos, model, moore=moore)
+        self.trait1 = 20
+        self.trait2 = 20
+        self.trait3 = 20
+        self.trait4 = 20
+        self.trait5 = 20
+        self.trait6 = 20
+        self.trait7 = 20
+        self.trait8 = 20
+        self.trait9 = 20
+        self.trait10 = 20
+        self.trait11 = 20
+        self.trait12 = 20
