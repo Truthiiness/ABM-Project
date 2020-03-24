@@ -8,12 +8,11 @@ Created on Sat Mar  7 16:01:55 2020
 from mesa import Model
 from mesa.time import RandomActivation
 from collections import defaultdict
-from mesa.space import NetworkGrid
 from mesa.space import MultiGrid
 from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
-from Network import Network
+#from Network import Network
 
 #Currently random movement mirrored from the wolf/sheep model. Working on
 #getting the NetworkGrid to work
@@ -103,7 +102,7 @@ class Model(Model):
         self.initial_Agent1S = initial_Agent1S
         self.initial_Agent2A = initial_Agent2A
         self.schedule = RandomActivationByOrg(self)
-        self.grid = (MultiGrid(self.height, self.width, torus=True))
+        self.grid = MultiGrid(self.height, self.width, torus=True)
         
         #Work in progress
         

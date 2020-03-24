@@ -9,16 +9,16 @@ import networkx as nx
 
 Network = nx.Graph()
 
-a1list = [('1A', '2A'), ('1A', '1B')]
+a1list = [('1A', '1B'), ('1A', '1C')]
 Network.add_edges_from(a1list)
 
-b1list = [('1B', '1A'), ('1B', '2A')]
+b1list = [('1B', '1A'), ('1B', '1C')]
 Network.add_edges_from(b1list)
 
-c1list = [('1C', '2A')]
+c1list = [('1C', '1A'), ('1C', '1B'), ('1C','2A')]
 Network.add_edges_from(c1list)
 
-a2list = [('2A', '1A'), ('2A', '1B'), ('2A', '1C')]
+a2list = [('2A', '1C')]
 Network.add_edges_from(c1list)
 
 nx.draw(Network)
