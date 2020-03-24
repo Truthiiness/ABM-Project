@@ -12,7 +12,8 @@ Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
 import matplotlib.pyplot as plt
 import numpy as np
 
-model = Model(100,100)
+#May be replaced by identical step in Model
+model = Model(20)
 for i in range(10):
     model.step()
 
