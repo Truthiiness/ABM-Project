@@ -16,11 +16,11 @@ class Org(Agent):
         self.pos = pos
         
     def step(self):
-        node = self.pos
-        this_cell = self.model.grid.get_cell_list_contents([self.pos])
-        neighbor_agent = [obj for obj in this_cell if isinstance(obj, Org)]
-        if len(neighbor_agent)>0:
-            other_agent = self.random.choice(self.model.schedule.agents)
+        neighbor_nodes = self.model.grid.get_neighbors(self.pos, include_center=True)
+        neighbors = neighbor_nodes.get_cell_list_contents([self.pos])
+        neighbor_agents = [obj for obj in neighbors if isinstance(obj, Org)]
+        if len(neighbor_agents)>0:
+            other_agent = self.random.choice(neighbor_agents)
             if self.trait1 > 0:
                 if other_agent.trait1 == 0:
                     return
