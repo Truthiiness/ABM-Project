@@ -17,7 +17,7 @@ class Org(Agent):
         
     def step(self):
         neighbor_nodes = self.model.grid.get_neighbors(self.pos, include_center=True)
-        neighbors = neighbor_nodes.get_cell_list_contents([self.pos])
+        neighbors = [agent for agent in self.model.grid.get_cell_list_contents(neighbor_nodes)]
         neighbor_agents = [obj for obj in neighbors if isinstance(obj, Org)]
         if len(neighbor_agents)>0:
             other_agent = self.random.choice(neighbor_agents)

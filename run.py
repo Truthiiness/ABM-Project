@@ -11,9 +11,10 @@ Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
 import matplotlib.pyplot as plt
 import numpy as np
+from Network import G
 
 #May be replaced by identical step in Model
-model = Model(20)
+model = Model(len(G.nodes()))
 for i in range(10):
     model.step()
 

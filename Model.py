@@ -12,7 +12,7 @@ from mesa.space import NetworkGrid
 from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
 Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
-import networkx as nx
+from Network import G
 
 #Currently random movement mirrored from the wolf/sheep model. Working on
 #getting the NetworkGrid to work
@@ -67,7 +67,7 @@ class Model(Model):
     initial_Agent1S = 10
     initial_Agent2A = 10
     
-    def __init__(self, G, initial_Agent1A = 10, initial_Agent1B = 10,
+    def __init__(self, nodes, initial_Agent1A = 10, initial_Agent1B = 10,
                  initial_Agent1C = 10, initial_Agent1D = 10, initial_Agent1E = 10,
                  initial_Agent1F = 10, initial_Agent1G = 10, initial_Agent1H = 10,
                  initial_Agent1I = 10, initial_Agent1J = 10, initial_Agent1K = 10,
@@ -96,30 +96,6 @@ class Model(Model):
         self.initial_Agent1R = initial_Agent1R
         self.initial_Agent1S = initial_Agent1S
         self.initial_Agent2A = initial_Agent2A
-        
-        G = nx.Graph()
-        location_list = [('1A', 0), ('1B', 1), ('1C', 2), ('1D', 3), ('1E', 4), ('1F', 5), 
-                 ('1G', 6), ('1H', 7), ('1I', 8), ('1J', 9), ('1K', 10), ('1L', 11), 
-                 ('1M', 12), ('1N', 13), ('1O', 14), ('1P', 15), ('1Q', 16),
-                 ('1R', 17), ('1S', 18), ('2A', 19)]
-
-        for loc in location_list:
-            for num in range(loc[1]):  
-                G.add_node(num, location = loc[0])
-
-        a1list = [('1A', '1B'), ('1A', '1C')]
-        G.add_edges_from(a1list)
-
-        b1list = [('1B', '1A'), ('1B', '1C')]
-        G.add_edges_from(b1list)
-
-        c1list = [('1C', '1A'), ('1C', '1B'), ('1C','2A')]
-        G.add_edges_from(c1list)
-
-        a2list = [('2A', '1C')]
-        G.add_edges_from(a2list)
-        
-        print(nx.draw(G))
         
         self.grid = NetworkGrid(G)        
         self.schedule = RandomActivationByOrg(self)

@@ -20,16 +20,16 @@ for loc in location_list:
     for num in range(loc[1]):  
         G.add_node(num, location = loc[0])
 
-a1list = [('1A', '1B'), ('1A', '1C')]
+a1list = [(0, 1), (0, 2)]
 G.add_edges_from(a1list)
 
-b1list = [('1B', '1A'), ('1B', '1C')]
+b1list = [(1, 0), (1, 2)]
 G.add_edges_from(b1list)
 
-c1list = [('1C', '1A'), ('1C', '1B'), ('1C','2A')]
+c1list = [(2, 0), (2, 1)]
 G.add_edges_from(c1list)
 
-a2list = [('2A', '1C')]
+a2list = [(19, 18)]
 G.add_edges_from(a2list)
 
 nx.draw(G)
