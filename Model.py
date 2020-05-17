@@ -10,12 +10,8 @@ from mesa.time import RandomActivation
 from collections import defaultdict
 from mesa.space import NetworkGrid
 from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
-Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L, Agent1M, Agent1N, Agent1O,
-Agent1P, Agent1Q, Agent1R, Agent1S, Agent2A)
+Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L)
 from Network import G
-
-#Currently random movement mirrored from the wolf/sheep model. Working on
-#getting the NetworkGrid to work
 
 class RandomActivationByOrg(RandomActivation):
 
@@ -58,22 +54,13 @@ class Model(Model):
     initial_Agent1J = 10
     initial_Agent1K = 10
     initial_Agent1L = 10
-    initial_Agent1M = 10
-    initial_Agent1N = 10
-    initial_Agent1O = 10
-    initial_Agent1P = 10
-    initial_Agent1Q = 10
-    initial_Agent1R = 10
-    initial_Agent1S = 10
-    initial_Agent2A = 10
+
     
     def __init__(self, nodes, initial_Agent1A = 10, initial_Agent1B = 10,
                  initial_Agent1C = 10, initial_Agent1D = 10, initial_Agent1E = 10,
                  initial_Agent1F = 10, initial_Agent1G = 10, initial_Agent1H = 10,
                  initial_Agent1I = 10, initial_Agent1J = 10, initial_Agent1K = 10,
-                 initial_Agent1L = 10, initial_Agent1M = 10, initial_Agent1N = 10,
-                 initial_Agent1O = 10, initial_Agent1P = 10, initial_Agent1Q = 10,
-                 initial_Agent1R = 10, initial_Agent1S = 10, initial_Agent2A=10):
+                 initial_Agent1L = 10):
         super().__init__()
                 
         self.initial_Agent1A = initial_Agent1A
@@ -88,14 +75,7 @@ class Model(Model):
         self.initial_Agent1J = initial_Agent1J
         self.initial_Agent1K = initial_Agent1K
         self.initial_Agent1L = initial_Agent1L
-        self.initial_Agent1M = initial_Agent1M
-        self.initial_Agent1N = initial_Agent1N
-        self.initial_Agent1O = initial_Agent1O
-        self.initial_Agent1P = initial_Agent1P
-        self.initial_Agent1Q = initial_Agent1Q
-        self.initial_Agent1R = initial_Agent1R
-        self.initial_Agent1S = initial_Agent1S
-        self.initial_Agent2A = initial_Agent2A
+
         
         self.grid = NetworkGrid(G)        
         self.schedule = RandomActivationByOrg(self)
@@ -159,47 +139,7 @@ class Model(Model):
             agent1l = Agent1L(self.next_id(), 11, self)
             self.grid.place_agent(agent1l, 11)
             self.schedule.add(agent1l)
-
-        for i in range(self.initial_Agent1M):
-            agent1m = Agent1M(self.next_id(), 12, self)
-            self.grid.place_agent(agent1m, 12)
-            self.schedule.add(agent1m)
-
-        for i in range(self.initial_Agent1N):
-            agent1n = Agent1N(self.next_id(), 13, self)
-            self.grid.place_agent(agent1n, 13)
-            self.schedule.add(agent1n)
-
-        for i in range(self.initial_Agent1O):
-            agent1o = Agent1O(self.next_id(), 14, self)
-            self.grid.place_agent(agent1o, 14)
-            self.schedule.add(agent1o)
-
-        for i in range(self.initial_Agent1P):
-            agent1p = Agent1P(self.next_id(), 15, self)
-            self.grid.place_agent(agent1p, 15)
-            self.schedule.add(agent1p)
-
-        for i in range(self.initial_Agent1Q):
-            agent1q = Agent1Q(self.next_id(), 16, self)
-            self.grid.place_agent(agent1q, 16)
-            self.schedule.add(agent1q)
-
-        for i in range(self.initial_Agent1R):
-            agent1r = Agent1R(self.next_id(), 17, self)
-            self.grid.place_agent(agent1r, 17)
-            self.schedule.add(agent1r)
-
-        for i in range(self.initial_Agent1S):
-            agent1s = Agent1S(self.next_id(), 18, self)
-            self.grid.place_agent(agent1s, 18)
-            self.schedule.add(agent1s)
-
-        for i in range(self.initial_Agent2A):
-            agent2a = Agent2A(self.next_id(), 19, self)
-            self.grid.place_agent(agent2a, 19)
-            self.schedule.add(agent2a)
-            
+           
         self.running = True
         
     def step(self):       
