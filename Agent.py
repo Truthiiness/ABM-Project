@@ -111,150 +111,150 @@ class Agent1A(Org):
         self.tools = 100
         self.attrib = 100
         self.stealth = 100
-        self.iwo = 100
+        self.iwo = 0
         self.ddos = 100
         self.destruct = 100
-        self.infra = 0
+        self.infra = 100
 
 class Agent1B(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1C(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1D(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 0
-        self.iwo = 0
-        self.ddos = 0
-        self.destruct = 0
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
              
 class Agent1E(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 0
-        self.zeroday = 0
-        self.tools = 0
-        self.attrib = 0
-        self.stealth = 0
-        self.iwo = 0
-        self.ddos = 0
-        self.destruct = 0
-        self.infra = 100
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
          
 class Agent1F(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 0
-        self.zeroday = 0
-        self.tools = 0
-        self.attrib = 0
-        self.stealth = 0
-        self.iwo = 0
-        self.ddos = 0
-        self.destruct = 0
-        self.infra = 100
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1G(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 0
-        self.zeroday = 0
-        self.tools = 0
-        self.attrib = 0
-        self.stealth = 0
-        self.iwo = 0
-        self.ddos = 0
-        self.destruct = 0
-        self.infra = 100
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1H(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1I(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1J(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
 
 class Agent1K(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 100
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1
        
 class Agent1L(Org):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 0
+        self.phish = 1
+        self.zeroday = 1
+        self.tools = 1
+        self.attrib = 1
+        self.stealth = 1
+        self.iwo = 1
+        self.ddos = 1
+        self.destruct = 1
+        self.infra = 1

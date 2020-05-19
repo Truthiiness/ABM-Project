@@ -11,20 +11,17 @@ import networkx as nx
 
 G = nx.Graph()
 
-location_list = [('1A', 0), ('1B', 1), ('1C', 2), ('1D', 3), ('1E', 4), ('1F', 5), 
-                 ('1G', 6), ('1H', 7), ('1I', 8), ('1J', 9), ('1K', 10), ('1L', 11)]
+location_list = [('1A', 1), ('1B', 2), ('1C', 3), ('1D', 4), ('1E', 5), ('1F', 6), 
+                 ('1G', 7), ('1H', 8), ('1I', 9), ('1J', 10), ('1K', 11), ('1L', 12),
+                 ('empty', 13)]
+#what am I doing wrong that I need an extra empty node for this to work?
 
 for loc in location_list:
     for num in range(loc[1]):  
         G.add_node(num, location = loc[0])
 
-a1list = [(0, 1), (0, 2)]
+a1list = [(1, 2), (1, 3), (2, 3)]
 G.add_edges_from(a1list)
 
-b1list = [(1, 0), (1, 2)]
-G.add_edges_from(b1list)
-
-c1list = [(2, 0), (2, 1)]
-G.add_edges_from(c1list)
 
 nx.draw(G)
