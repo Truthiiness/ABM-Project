@@ -8,13 +8,12 @@ Created on Sat Mar  7 16:05:15 2020
 from Model import Model
 from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
 Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L)
-import matplotlib.pyplot as plt
 import numpy as np
 from Network import G
 
 #May be replaced by identical step in Model
 model = Model(len(G.nodes()))
-for i in range(10):
+for i in range(60):
     model.step()
 
 #Still here in case I need it later, but I don't need it at the moment. The individual

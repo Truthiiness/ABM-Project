@@ -42,7 +42,7 @@ class RandomActivationByOrg(RandomActivation):
 
 
 class Model(Model):
-    initial_Agent1A = 10
+    initial_Agent1A = 1
     initial_Agent1B = 10
     initial_Agent1C = 10
     initial_Agent1D = 10
@@ -56,7 +56,7 @@ class Model(Model):
     initial_Agent1L = 10
 
     
-    def __init__(self, nodes, initial_Agent1A = 10, initial_Agent1B = 10,
+    def __init__(self, nodes, initial_Agent1A = 1, initial_Agent1B = 10,
                  initial_Agent1C = 10, initial_Agent1D = 10, initial_Agent1E = 10,
                  initial_Agent1F = 10, initial_Agent1G = 10, initial_Agent1H = 10,
                  initial_Agent1I = 10, initial_Agent1J = 10, initial_Agent1K = 10,
@@ -81,63 +81,63 @@ class Model(Model):
         self.schedule = RandomActivationByOrg(self)
                            
         for i in range(self.initial_Agent1A):
-            agent1a = Agent1A(self.next_id(), 1, self)
-            self.grid.place_agent(agent1a, 1)
+            agent1a = Agent1A(self.next_id(), '1A', self)
+            self.grid.place_agent(agent1a, '1A')
             self.schedule.add(agent1a)
 
         for i in range(self.initial_Agent1B):
-            agent1b = Agent1B(self.next_id(), 2, self)
-            self.grid.place_agent(agent1b, 2)
+            agent1b = Agent1B(self.next_id(), '1B', self)
+            self.grid.place_agent(agent1b, '1B')
             self.schedule.add(agent1b)
 
         for i in range(self.initial_Agent1C):
-            agent1c = Agent1C(self.next_id(), 3, self)
-            self.grid.place_agent(agent1c, 3)
+            agent1c = Agent1C(self.next_id(), '1C', self)
+            self.grid.place_agent(agent1c, '1C')
             self.schedule.add(agent1c)
 
         for i in range(self.initial_Agent1D):
-            agent1d = Agent1D(self.next_id(), 4, self)
-            self.grid.place_agent(agent1d, 4)
+            agent1d = Agent1D(self.next_id(), '1D', self)
+            self.grid.place_agent(agent1d, '1D')
             self.schedule.add(agent1d)
 
         for i in range(self.initial_Agent1E):
-            agent1e = Agent1E(self.next_id(), 5, self)
-            self.grid.place_agent(agent1e, 5)
+            agent1e = Agent1E(self.next_id(), '1E', self)
+            self.grid.place_agent(agent1e, '1E')
             self.schedule.add(agent1e)
 
         for i in range(self.initial_Agent1F):
-            agent1f = Agent1F(self.next_id(), 6, self)
-            self.grid.place_agent(agent1f, 6)
+            agent1f = Agent1F(self.next_id(), '1F', self)
+            self.grid.place_agent(agent1f, '1F')
             self.schedule.add(agent1f)
 
         for i in range(self.initial_Agent1G):
-            agent1g = Agent1G(self.next_id(), 7, self)
-            self.grid.place_agent(agent1g, 7)
+            agent1g = Agent1G(self.next_id(), '1G', self)
+            self.grid.place_agent(agent1g, '1G')
             self.schedule.add(agent1g)
 
         for i in range(self.initial_Agent1H):
-            agent1h = Agent1H(self.next_id(), 8, self)
-            self.grid.place_agent(agent1h, 8)
+            agent1h = Agent1H(self.next_id(), '1H', self)
+            self.grid.place_agent(agent1h, '1H')
             self.schedule.add(agent1h)
 
         for i in range(self.initial_Agent1I):
-            agent1i = Agent1I(self.next_id(), 9, self)
-            self.grid.place_agent(agent1i, 9)
+            agent1i = Agent1I(self.next_id(), '1I', self)
+            self.grid.place_agent(agent1i, '1I')
             self.schedule.add(agent1i)
 
         for i in range(self.initial_Agent1J):
-            agent1j = Agent1J(self.next_id(), 10, self)
-            self.grid.place_agent(agent1j, 10)
+            agent1j = Agent1J(self.next_id(), '1J', self)
+            self.grid.place_agent(agent1j, '1J')
             self.schedule.add(agent1j)
 
         for i in range(self.initial_Agent1K):
-            agent1k = Agent1K(self.next_id(), 11, self)
-            self.grid.place_agent(agent1k, 11)
+            agent1k = Agent1K(self.next_id(), '1K', self)
+            self.grid.place_agent(agent1k, '1K')
             self.schedule.add(agent1k)
 
         for i in range(self.initial_Agent1L):
-            agent1l = Agent1L(self.next_id(), 12, self)
-            self.grid.place_agent(agent1l, 12)
+            agent1l = Agent1L(self.next_id(), '1L', self)
+            self.grid.place_agent(agent1l, '1L')
             self.schedule.add(agent1l)
            
         self.running = True
