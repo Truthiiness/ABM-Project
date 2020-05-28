@@ -6,14 +6,15 @@ Created on Sat Mar  7 16:05:15 2020
 """
 
 from Model import Model
-from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
-Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L)
+from Agent import (FancyBear, PrimitiveBear, VenomousBear, BerserkBear, CozyBear, 
+                   VoodooBear, RefinedKitten, ImperialKitten, CharmingKitten, 
+                   HelixKitten, StaticKitten, RemixKitten)
 import numpy as np
 from Network import G
 
 #May be replaced by identical step in Model
 model = Model(len(G.nodes()))
-for i in range(60):
+for i in range(365):
     model.step()
 
 #Still here in case I need it later, but I don't need it at the moment. The individual
@@ -31,206 +32,206 @@ for i in range(60):
 #all_agents_destruct = [a.destruct for a in model.schedule.agents]
 #all_agents_infra = [a.infra for a in model.schedule.agents]
 
-agent1a_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1A)]
-agent1a_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1A)]
+fancybear_phish = [a.phish for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_tools = [a.tools for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, FancyBear)]
+fancybear_infra = [a.infra for a in model.schedule.agents if isinstance(a, FancyBear)]
 
-agent1a_avg_traits = [np.mean(agent1a_phish),np.mean(agent1a_zeroday),np.mean(agent1a_tools),
-np.mean(agent1a_attrib),np.mean(agent1a_stealth),np.mean(agent1a_iwo),
-np.mean(agent1a_ddos),np.mean(agent1a_destruct),np.mean(agent1a_infra)]
+agent1a_avg_traits = [np.mean(fancybear_phish),np.mean(fancybear_zeroday),np.mean(fancybear_tools),
+np.mean(fancybear_attrib),np.mean(fancybear_stealth),np.mean(fancybear_iwo),
+np.mean(fancybear_ddos),np.mean(fancybear_destruct),np.mean(fancybear_infra)]
 
-print("Average Agent1A traits are:")
+print("Average Fancy Bear traits are:")
 print(agent1a_avg_traits)
 
-agent1b_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1B)]
-agent1b_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1B)]
+primitivebear_phish = [a.phish for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_tools = [a.tools for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
+primitivebear_infra = [a.infra for a in model.schedule.agents if isinstance(a, PrimitiveBear)]
 
-agent1b_avg_traits = [np.mean(agent1b_phish),np.mean(agent1b_zeroday),np.mean(agent1b_tools),
-np.mean(agent1b_attrib),np.mean(agent1b_stealth),np.mean(agent1b_iwo),
-np.mean(agent1b_ddos),np.mean(agent1b_destruct),np.mean(agent1b_infra)]
+agent1b_avg_traits = [np.mean(primitivebear_phish),np.mean(primitivebear_zeroday),np.mean(primitivebear_tools),
+np.mean(primitivebear_attrib),np.mean(primitivebear_stealth),np.mean(primitivebear_iwo),
+np.mean(primitivebear_ddos),np.mean(primitivebear_destruct),np.mean(primitivebear_infra)]
 
-print("Average Agent1B traits are:") 
+print("Average Primitive Bear traits are:") 
 print(agent1b_avg_traits)
 
-agent1c_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1C)]
-agent1c_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1C)]
+venomousbear_phish = [a.phish for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_tools = [a.tools for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, VenomousBear)]
+venomousbear_infra = [a.infra for a in model.schedule.agents if isinstance(a, VenomousBear)]
 
-agent1c_avg_traits = [np.mean(agent1c_phish),np.mean(agent1c_zeroday),np.mean(agent1c_tools),
-np.mean(agent1c_attrib),np.mean(agent1c_stealth),np.mean(agent1c_iwo),
-np.mean(agent1c_ddos),np.mean(agent1c_destruct),np.mean(agent1c_infra)]
+agent1c_avg_traits = [np.mean(venomousbear_phish),np.mean(venomousbear_zeroday),np.mean(venomousbear_tools),
+np.mean(venomousbear_attrib),np.mean(venomousbear_stealth),np.mean(venomousbear_iwo),
+np.mean(venomousbear_ddos),np.mean(venomousbear_destruct),np.mean(venomousbear_infra)]
 
-print("Average Agent1C traits are:")
+print("Average Venomous Bear traits are:")
 print(agent1c_avg_traits)
 
-agent1d_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1D)]
-agent1d_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1D)]
+berserkbear_phish = [a.phish for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_tools = [a.tools for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, BerserkBear)]
+berserkbear_infra = [a.infra for a in model.schedule.agents if isinstance(a, BerserkBear)]
 
-agent1d_avg_traits = [np.mean(agent1d_phish),np.mean(agent1d_zeroday),np.mean(agent1d_tools),
-np.mean(agent1d_attrib),np.mean(agent1d_stealth),np.mean(agent1d_iwo),
-np.mean(agent1d_ddos),np.mean(agent1d_destruct),np.mean(agent1d_infra)]
+agent1d_avg_traits = [np.mean(berserkbear_phish),np.mean(berserkbear_zeroday),np.mean(berserkbear_tools),
+np.mean(berserkbear_attrib),np.mean(berserkbear_stealth),np.mean(berserkbear_iwo),
+np.mean(berserkbear_ddos),np.mean(berserkbear_destruct),np.mean(berserkbear_infra)]
 
-print("Average Agent1D traits are:") 
+print("Average Berserk Bear traits are:") 
 print(agent1d_avg_traits)
 
-agent1e_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1E)]
-agent1e_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1E)]
+cozybear_phish = [a.phish for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_tools = [a.tools for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, CozyBear)]
+cozybear_infra = [a.infra for a in model.schedule.agents if isinstance(a, CozyBear)]
 
-agent1e_avg_traits = [np.mean(agent1e_phish),np.mean(agent1e_zeroday),np.mean(agent1e_tools),
-np.mean(agent1e_attrib),np.mean(agent1e_stealth),np.mean(agent1e_iwo),
-np.mean(agent1e_ddos),np.mean(agent1e_destruct),np.mean(agent1e_infra)]
+agent1e_avg_traits = [np.mean(cozybear_phish),np.mean(cozybear_zeroday),np.mean(cozybear_tools),
+np.mean(cozybear_attrib),np.mean(cozybear_stealth),np.mean(cozybear_iwo),
+np.mean(cozybear_ddos),np.mean(cozybear_destruct),np.mean(cozybear_infra)]
 
-print("Average Agent1E traits are:") 
+print("Average Cozy Bear traits are:") 
 print(agent1e_avg_traits)
 
-agent1f_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1F)]
-agent1f_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1F)]
+voodoobear_phish = [a.phish for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_tools = [a.tools for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, VoodooBear)]
+voodoobear_infra = [a.infra for a in model.schedule.agents if isinstance(a, VoodooBear)]
 
-agent1f_avg_traits = [np.mean(agent1f_phish),np.mean(agent1f_zeroday),np.mean(agent1f_tools),
-np.mean(agent1f_attrib),np.mean(agent1f_stealth),np.mean(agent1f_iwo),
-np.mean(agent1f_ddos),np.mean(agent1f_destruct),np.mean(agent1f_infra)]
+agent1f_avg_traits = [np.mean(voodoobear_phish),np.mean(voodoobear_zeroday),np.mean(voodoobear_tools),
+np.mean(voodoobear_attrib),np.mean(voodoobear_stealth),np.mean(voodoobear_iwo),
+np.mean(voodoobear_ddos),np.mean(voodoobear_destruct),np.mean(voodoobear_infra)]
 
-print("Average Agent1F traits are:") 
+print("Average Voodoo Bear traits are:") 
 print(agent1f_avg_traits)
 
-agent1g_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1G)]
-agent1g_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1G)]
+refinedkitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, RefinedKitten)]
+refinedkitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, RefinedKitten)]
 
-agent1g_avg_traits = [np.mean(agent1g_phish),np.mean(agent1g_zeroday),np.mean(agent1g_tools),
-np.mean(agent1g_attrib),np.mean(agent1g_stealth),np.mean(agent1g_iwo),
-np.mean(agent1g_ddos),np.mean(agent1g_destruct),np.mean(agent1g_infra)]
+agent1g_avg_traits = [np.mean(refinedkitten_phish),np.mean(refinedkitten_zeroday),np.mean(refinedkitten_tools),
+np.mean(refinedkitten_attrib),np.mean(refinedkitten_stealth),np.mean(refinedkitten_iwo),
+np.mean(refinedkitten_ddos),np.mean(refinedkitten_destruct),np.mean(refinedkitten_infra)]
 
-print("Average Agent1G traits are:")
+print("Average Refined Kitten traits are:")
 print(agent1g_avg_traits)
 
-agent1h_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1H)]
-agent1h_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1H)]
+imperialkitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, ImperialKitten)]
+imperialkitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, ImperialKitten)]
 
-agent1h_avg_traits = [np.mean(agent1h_phish),np.mean(agent1h_zeroday),np.mean(agent1h_tools),
-np.mean(agent1h_attrib),np.mean(agent1h_stealth),np.mean(agent1h_iwo),
-np.mean(agent1h_ddos),np.mean(agent1h_destruct),np.mean(agent1h_infra)]
+agent1h_avg_traits = [np.mean(imperialkitten_phish),np.mean(imperialkitten_zeroday),np.mean(imperialkitten_tools),
+np.mean(imperialkitten_attrib),np.mean(imperialkitten_stealth),np.mean(imperialkitten_iwo),
+np.mean(imperialkitten_ddos),np.mean(imperialkitten_destruct),np.mean(imperialkitten_infra)]
 
-print("Average Agent1H traits are:")
+print("Average Imperial Kitten traits are:")
 print(agent1h_avg_traits)
 
-agent1i_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1I)]
-agent1i_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1I)]
+charmingkitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, CharmingKitten)]
+charmingkitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, CharmingKitten)]
 
-agent1i_avg_traits = [np.mean(agent1i_phish),np.mean(agent1i_zeroday),np.mean(agent1i_tools),
-np.mean(agent1i_attrib),np.mean(agent1i_stealth),np.mean(agent1i_iwo),
-np.mean(agent1i_ddos),np.mean(agent1i_destruct),np.mean(agent1i_infra)]
+agent1i_avg_traits = [np.mean(charmingkitten_phish),np.mean(charmingkitten_zeroday),np.mean(charmingkitten_tools),
+np.mean(charmingkitten_attrib),np.mean(charmingkitten_stealth),np.mean(charmingkitten_iwo),
+np.mean(charmingkitten_ddos),np.mean(charmingkitten_destruct),np.mean(charmingkitten_infra)]
 
-print("Average Agent1I traits are:")
+print("Average Charming Kitten traits are:")
 print(agent1i_avg_traits)
 
-agent1j_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1J)]
-agent1j_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1J)]
+helixkitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, HelixKitten)]
+helixkitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, HelixKitten)]
 
-agent1j_avg_traits = [np.mean(agent1j_phish),np.mean(agent1j_zeroday),np.mean(agent1j_tools),
-np.mean(agent1j_attrib),np.mean(agent1j_stealth),np.mean(agent1j_iwo),
-np.mean(agent1j_ddos),np.mean(agent1j_destruct),np.mean(agent1j_infra)]
+agent1j_avg_traits = [np.mean(helixkitten_phish),np.mean(helixkitten_zeroday),np.mean(helixkitten_tools),
+np.mean(helixkitten_attrib),np.mean(helixkitten_stealth),np.mean(helixkitten_iwo),
+np.mean(helixkitten_ddos),np.mean(helixkitten_destruct),np.mean(helixkitten_infra)]
 
-print("Average Agent1J traits are:")
+print("Average Helix Kitten traits are:")
 print(agent1j_avg_traits)
 
-agent1k_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1K)]
-agent1k_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1K)]
+statickitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, StaticKitten)]
+statickitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, StaticKitten)]
 
-agent1k_avg_traits = [np.mean(agent1k_phish),np.mean(agent1k_zeroday),np.mean(agent1k_tools),
-np.mean(agent1k_attrib),np.mean(agent1k_stealth),np.mean(agent1k_iwo),
-np.mean(agent1k_ddos),np.mean(agent1k_destruct),np.mean(agent1k_infra)]
+agent1k_avg_traits = [np.mean(statickitten_phish),np.mean(statickitten_zeroday),np.mean(statickitten_tools),
+np.mean(statickitten_attrib),np.mean(statickitten_stealth),np.mean(statickitten_iwo),
+np.mean(statickitten_ddos),np.mean(statickitten_destruct),np.mean(statickitten_infra)]
 
-print("Average Agent1K traits are:")
+print("Average Static Kitten traits are:")
 print(agent1k_avg_traits)
 
-agent1l_phish = [a.phish for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_tools = [a.tools for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, Agent1L)]
-agent1l_infra = [a.infra for a in model.schedule.agents if isinstance(a, Agent1L)]
+remixkitten_phish = [a.phish for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_zeroday = [a.zeroday for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_tools = [a.tools for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_attrib = [a.attrib for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_stealth = [a.stealth for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_iwo = [a.iwo for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_ddos = [a.ddos for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_destruct = [a.destruct for a in model.schedule.agents if isinstance(a, RemixKitten)]
+remixkitten_infra = [a.infra for a in model.schedule.agents if isinstance(a, RemixKitten)]
 
-agent1l_avg_traits = [np.mean(agent1l_phish),np.mean(agent1l_zeroday),np.mean(agent1l_tools),
-np.mean(agent1l_attrib),np.mean(agent1l_stealth),np.mean(agent1l_iwo),
-np.mean(agent1l_ddos),np.mean(agent1l_destruct),np.mean(agent1l_infra)]
+agent1l_avg_traits = [np.mean(remixkitten_phish),np.mean(remixkitten_zeroday),np.mean(remixkitten_tools),
+np.mean(remixkitten_attrib),np.mean(remixkitten_stealth),np.mean(remixkitten_iwo),
+np.mean(remixkitten_ddos),np.mean(remixkitten_destruct),np.mean(remixkitten_infra)]
 
-print("Average Agent1L traits are:")
+print("Average Remix Kitten traits are:")
 print(agent1l_avg_traits)

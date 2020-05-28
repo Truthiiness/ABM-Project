@@ -9,8 +9,9 @@ from mesa import Model
 from mesa.time import RandomActivation
 from collections import defaultdict
 from mesa.space import NetworkGrid
-from Agent import (Agent1A, Agent1B, Agent1C, Agent1D, Agent1E, Agent1F,
-Agent1G, Agent1H, Agent1I, Agent1J, Agent1K, Agent1L)
+from Agent import (FancyBear, PrimitiveBear, VenomousBear, BerserkBear, CozyBear, 
+                   VoodooBear, RefinedKitten, ImperialKitten, CharmingKitten, 
+                   HelixKitten, StaticKitten, RemixKitten)
 from Network import G
 
 class RandomActivationByOrg(RandomActivation):
@@ -42,103 +43,104 @@ class RandomActivationByOrg(RandomActivation):
 
 
 class Model(Model):
-    initial_Agent1A = 1
-    initial_Agent1B = 10
-    initial_Agent1C = 10
-    initial_Agent1D = 10
-    initial_Agent1E = 10
-    initial_Agent1F = 10
-    initial_Agent1G = 10
-    initial_Agent1H = 10
-    initial_Agent1I = 10
-    initial_Agent1J = 10
-    initial_Agent1K = 10
-    initial_Agent1L = 10
+    initial_FancyBear = 1
+    initial_PrimitiveBear = 0
+    initial_VenomousBear = 0
+    initial_BerserkBear = 0
+    initial_CozyBear = 0
+    initial_VoodooBear = 0
+    initial_RefinedKitten = 100
+    initial_ImperialKitten = 100
+    initial_CharmingKitten = 100
+    initial_HelixKitten = 100
+    initial_StaticKitten = 100
+    initial_RemixKitten = 100
 
     
-    def __init__(self, nodes, initial_Agent1A = 1, initial_Agent1B = 10,
-                 initial_Agent1C = 10, initial_Agent1D = 10, initial_Agent1E = 10,
-                 initial_Agent1F = 10, initial_Agent1G = 10, initial_Agent1H = 10,
-                 initial_Agent1I = 10, initial_Agent1J = 10, initial_Agent1K = 10,
-                 initial_Agent1L = 10):
+    def __init__(self, nodes, initial_FancyBear = 1, initial_PrimitiveBear = 0,
+                 initial_VenomousBear = 0, initial_BerserkBear = 0, initial_CozyBear = 0,
+                 initial_VoodooBear = 0, initial_RefinedKitten = 100, 
+                 initial_ImperialKitten = 100, initial_CharmingKitten = 100, 
+                 initial_HelixKitten = 100, initial_StaticKitten = 100,
+                 initial_RemixKitten = 100):
         super().__init__()
                 
-        self.initial_Agent1A = initial_Agent1A
-        self.initial_Agent1B = initial_Agent1B
-        self.initial_Agent1C = initial_Agent1C
-        self.initial_Agent1D = initial_Agent1D
-        self.initial_Agent1E = initial_Agent1E
-        self.initial_Agent1F = initial_Agent1F
-        self.initial_Agent1G = initial_Agent1G
-        self.initial_Agent1H = initial_Agent1H
-        self.initial_Agent1I = initial_Agent1I
-        self.initial_Agent1J = initial_Agent1J
-        self.initial_Agent1K = initial_Agent1K
-        self.initial_Agent1L = initial_Agent1L
+        self.initial_FancyBear = initial_FancyBear
+        self.initial_PrimitiveBear = initial_PrimitiveBear
+        self.initial_VenomousBear = initial_VenomousBear
+        self.initial_BerserkBear = initial_BerserkBear
+        self.initial_CozyBear = initial_CozyBear
+        self.initial_VoodooBear = initial_VoodooBear
+        self.initial_RefinedKitten = initial_RefinedKitten
+        self.initial_ImperialKitten = initial_ImperialKitten
+        self.initial_CharmingKitten = initial_CharmingKitten
+        self.initial_HelixKitten = initial_HelixKitten
+        self.initial_StaticKitten = initial_StaticKitten
+        self.initial_RemixKitten = initial_RemixKitten
 
         
         self.grid = NetworkGrid(G)        
         self.schedule = RandomActivationByOrg(self)
                            
-        for i in range(self.initial_Agent1A):
-            agent1a = Agent1A(self.next_id(), '1A', self)
-            self.grid.place_agent(agent1a, '1A')
-            self.schedule.add(agent1a)
+        for i in range(self.initial_FancyBear):
+            fancybear = FancyBear(self.next_id(), 'FB', self)
+            self.grid.place_agent(fancybear, 'FB')
+            self.schedule.add(fancybear)
 
-        for i in range(self.initial_Agent1B):
-            agent1b = Agent1B(self.next_id(), '1B', self)
-            self.grid.place_agent(agent1b, '1B')
-            self.schedule.add(agent1b)
+        for i in range(self.initial_PrimitiveBear):
+            primitivebear = PrimitiveBear(self.next_id(), 'PB', self)
+            self.grid.place_agent(primitivebear, 'PB')
+            self.schedule.add(primitivebear)
 
-        for i in range(self.initial_Agent1C):
-            agent1c = Agent1C(self.next_id(), '1C', self)
-            self.grid.place_agent(agent1c, '1C')
-            self.schedule.add(agent1c)
+        for i in range(self.initial_VenomousBear):
+            venomousbear = VenomousBear(self.next_id(), 'VEB', self)
+            self.grid.place_agent(venomousbear, 'VEB')
+            self.schedule.add(venomousbear)
 
-        for i in range(self.initial_Agent1D):
-            agent1d = Agent1D(self.next_id(), '1D', self)
-            self.grid.place_agent(agent1d, '1D')
-            self.schedule.add(agent1d)
+        for i in range(self.initial_BerserkBear):
+            berserkbear = BerserkBear(self.next_id(), 'BB', self)
+            self.grid.place_agent(berserkbear, 'BB')
+            self.schedule.add(berserkbear)
 
-        for i in range(self.initial_Agent1E):
-            agent1e = Agent1E(self.next_id(), '1E', self)
-            self.grid.place_agent(agent1e, '1E')
-            self.schedule.add(agent1e)
+        for i in range(self.initial_CozyBear):
+            cozybear = CozyBear(self.next_id(), 'CB', self)
+            self.grid.place_agent(cozybear, 'CB')
+            self.schedule.add(cozybear)
 
-        for i in range(self.initial_Agent1F):
-            agent1f = Agent1F(self.next_id(), '1F', self)
-            self.grid.place_agent(agent1f, '1F')
-            self.schedule.add(agent1f)
+        for i in range(self.initial_VoodooBear):
+            voodoobear = VoodooBear(self.next_id(), 'VOB', self)
+            self.grid.place_agent(voodoobear, 'VOB')
+            self.schedule.add(voodoobear)
 
-        for i in range(self.initial_Agent1G):
-            agent1g = Agent1G(self.next_id(), '1G', self)
-            self.grid.place_agent(agent1g, '1G')
-            self.schedule.add(agent1g)
+        for i in range(self.initial_RefinedKitten):
+            refinedkitten = RefinedKitten(self.next_id(), 'RFK', self)
+            self.grid.place_agent(refinedkitten, 'RFK')
+            self.schedule.add(refinedkitten)
 
-        for i in range(self.initial_Agent1H):
-            agent1h = Agent1H(self.next_id(), '1H', self)
-            self.grid.place_agent(agent1h, '1H')
-            self.schedule.add(agent1h)
+        for i in range(self.initial_ImperialKitten):
+            imperialkitten = ImperialKitten(self.next_id(), 'IK', self)
+            self.grid.place_agent(imperialkitten, 'IK')
+            self.schedule.add(imperialkitten)
 
-        for i in range(self.initial_Agent1I):
-            agent1i = Agent1I(self.next_id(), '1I', self)
-            self.grid.place_agent(agent1i, '1I')
-            self.schedule.add(agent1i)
+        for i in range(self.initial_CharmingKitten):
+            charmingkitten = CharmingKitten(self.next_id(), 'CK', self)
+            self.grid.place_agent(charmingkitten, 'CK')
+            self.schedule.add(charmingkitten)
 
-        for i in range(self.initial_Agent1J):
-            agent1j = Agent1J(self.next_id(), '1J', self)
-            self.grid.place_agent(agent1j, '1J')
-            self.schedule.add(agent1j)
+        for i in range(self.initial_HelixKitten):
+            helixkitten = HelixKitten(self.next_id(), 'HK', self)
+            self.grid.place_agent(helixkitten, 'HK')
+            self.schedule.add(helixkitten)
 
-        for i in range(self.initial_Agent1K):
-            agent1k = Agent1K(self.next_id(), '1K', self)
-            self.grid.place_agent(agent1k, '1K')
-            self.schedule.add(agent1k)
+        for i in range(self.initial_StaticKitten):
+            statickitten = StaticKitten(self.next_id(), 'SK', self)
+            self.grid.place_agent(statickitten, 'SK')
+            self.schedule.add(statickitten)
 
-        for i in range(self.initial_Agent1L):
-            agent1l = Agent1L(self.next_id(), '1L', self)
-            self.grid.place_agent(agent1l, '1L')
-            self.schedule.add(agent1l)
+        for i in range(self.initial_RemixKitten):
+            remixkitten = RemixKitten(self.next_id(), 'RMK', self)
+            self.grid.place_agent(remixkitten, 'RMK')
+            self.schedule.add(remixkitten)
            
         self.running = True
         
