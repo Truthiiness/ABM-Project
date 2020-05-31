@@ -41,7 +41,6 @@ class RandomActivationByOrg(RandomActivation):
         for agent_key in agent_keys:
             self.agents_by_org[org][agent_key].step()
 
-
 class Model(Model):
     initial_FancyBear = 1
     initial_PrimitiveBear = 0
