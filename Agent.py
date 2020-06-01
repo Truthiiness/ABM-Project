@@ -160,23 +160,23 @@ class Russian(Org):
         i=0
         while i<30:
             if self.phish>0:
-                self.phish += 0.013
+                self.phish += 0.014
             if self.zeroday>0:
-                self.zeroday += 0.013
+                self.zeroday += 0.014
             if self.tools>0:
-                self.tools += 0.013 
+                self.tools += 0.014 
             if self.attrib>0:
-                self.attrib += 0.013
+                self.attrib += 0.014
             if self.stealth>0:
-                self.stealth += 0.013
+                self.stealth += 0.014
             if self.iwo>0:
-                self.iwo += 0.013
+                self.iwo += 0.014
             if self.ddos>0:
-                self.ddos += 0.013
+                self.ddos += 0.014
             if self.destruct>0:
-                self.destruct += 0.013
+                self.destruct += 0.014
             if self.infra>0:
-                self.infra += 0.013
+                self.infra += 0.014
             i+=1
                 
 class Iranian(Org):
@@ -324,99 +324,99 @@ class Iranian(Org):
         i=0
         while i<30:
             if self.phish>0:
-                self.phish += 0.013
+                self.phish += 0.014
             if self.zeroday>0:
-                self.zeroday += 0.013
+                self.zeroday += 0.014
             if self.tools>0:
-                self.tools += 0.013 
+                self.tools += 0.014
             if self.attrib>0:
-                self.attrib += 0.013
+                self.attrib += 0.014
             if self.stealth>0:
-                self.stealth += 0.013
+                self.stealth += 0.014
             if self.iwo>0:
-                self.iwo += 0.013
+                self.iwo += 0.014
             if self.ddos>0:
-                self.ddos += 0.013
+                self.ddos += 0.014
             if self.destruct>0:
-                self.destruct += 0.013
+                self.destruct += 0.014
             if self.infra>0:
-                self.infra += 0.013
+                self.infra += 0.014
             i+=1
            
 class FancyBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
         self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
+        self.zeroday = 80
+        self.tools = 95
+        self.attrib = 95
+        self.stealth = 95
         self.iwo = 100
-        self.ddos = 100
+        self.ddos = 85
         self.destruct = 100
-        self.infra = 100
+        self.infra = 80
 
 class PrimitiveBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
-        self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 100
+        self.phish = 90
+        self.zeroday = 50
+        self.tools = 95
+        self.attrib = 80
+        self.stealth = 95
+        self.iwo = 0
+        self.ddos = 0
+        self.destruct = 80
+        self.infra = 0
 
 class VenomousBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
         self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
+        self.zeroday = 80
+        self.tools = 95
         self.attrib = 100
         self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 100
+        self.iwo = 0
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
 
 class BerserkBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
         self.phish = 100
-        self.zeroday = 100
-        self.tools = 100
+        self.zeroday = 0
+        self.tools = 50
         self.attrib = 100
         self.stealth = 100
-        self.iwo = 100
-        self.ddos = 100
+        self.iwo = 0
+        self.ddos = 50
         self.destruct = 100
-        self.infra = 100
+        self.infra = 90
              
 class CozyBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
         self.phish = 100
-        self.zeroday = 100
+        self.zeroday = 75
         self.tools = 100
-        self.attrib = 100
+        self.attrib = 90
         self.stealth = 100
         self.iwo = 100
-        self.ddos = 100
-        self.destruct = 100
-        self.infra = 100
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
          
 class VoodooBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
         self.phish = 100
         self.zeroday = 100
-        self.tools = 100
-        self.attrib = 100
+        self.tools = 50
+        self.attrib = 80
         self.stealth = 100
-        self.iwo = 100
+        self.iwo = 0
         self.ddos = 100
         self.destruct = 100
         self.infra = 100
@@ -424,77 +424,77 @@ class VoodooBear(Russian):
 class RefinedKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 40
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
+        self.tools = 50
+        self.attrib = 50
+        self.stealth = 50
         self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.ddos = 35
+        self.destruct = 50
+        self.infra = 20
 
 class ImperialKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 50
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
-        self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.tools = 30
+        self.attrib = 20
+        self.stealth = 20
+        self.iwo = 20
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
 
 class CharmingKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 50
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
-        self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.tools = 30
+        self.attrib = 15
+        self.stealth = 15
+        self.iwo = 30
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
 
 class HelixKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 60
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
+        self.tools = 40
+        self.attrib = 35
+        self.stealth = 40
         self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
 
 class StaticKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 50
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
-        self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.tools = 40
+        self.attrib = 60
+        self.stealth = 60
+        self.iwo = 0
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
        
 class RemixKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
-        self.phish = 1
+        self.phish = 60
         self.zeroday = 1
-        self.tools = 1
-        self.attrib = 1
-        self.stealth = 1
+        self.tools = 40
+        self.attrib = 50
+        self.stealth = 50
         self.iwo = 1
-        self.ddos = 1
-        self.destruct = 1
-        self.infra = 1
+        self.ddos = 0
+        self.destruct = 0
+        self.infra = 0
