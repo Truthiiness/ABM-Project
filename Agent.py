@@ -21,6 +21,27 @@ class Russian(Org):
 
     def step(self):
         i=0
+        h=0
+        while h<30:
+            if self.phish>0:
+                self.phish += 0.013
+            if self.zeroday>0:
+                self.zeroday += 0.013
+            if self.tools>0:
+                self.tools += 0.013
+            if self.attrib>0:
+                self.attrib += 0.013
+            if self.stealth>0:
+                self.stealth += 0.013
+            if self.iwo>0:
+                self.iwo += 0.013
+            if self.ddos>0:
+                self.ddos += 0.013
+            if self.destruct>0:
+                self.destruct += 0.013
+            if self.infra>0:
+                self.infra += 0.013
+            h+=1
         while i<20:
             neighbor_nodes = self.model.grid.get_neighbors(self.pos, include_center=True)
             neighbors = [agent for agent in self.model.grid.get_cell_list_contents(neighbor_nodes)]
@@ -157,8 +178,15 @@ class Russian(Org):
                     elif self.infra - other_agent.infra > 0:
                         other_agent.infra = self.infra
                 i+=1
+                
+class Iranian(Org):
+    def __init__(self, unique_id, pos, model):
+        super().__init__(unique_id, pos, model)
+
+    def step(self):
         i=0
-        while i<30:
+        h=0
+        while h<30:
             if self.phish>0:
                 self.phish += 0.013
             if self.zeroday>0:
@@ -177,14 +205,7 @@ class Russian(Org):
                 self.destruct += 0.013
             if self.infra>0:
                 self.infra += 0.013
-            i+=1
-                
-class Iranian(Org):
-    def __init__(self, unique_id, pos, model):
-        super().__init__(unique_id, pos, model)
-
-    def step(self):
-        i=0
+            h+=1
         while i<30:
             neighbor_nodes = self.model.grid.get_neighbors(self.pos, include_center=True)
             neighbors = [agent for agent in self.model.grid.get_cell_list_contents(neighbor_nodes)]
@@ -321,31 +342,11 @@ class Iranian(Org):
                     elif self.infra - other_agent.infra > 0:
                         other_agent.infra = self.infra
                 i+=1
-        i=0
-        while i<30:
-            if self.phish>0:
-                self.phish += 0.013
-            if self.zeroday>0:
-                self.zeroday += 0.013
-            if self.tools>0:
-                self.tools += 0.013
-            if self.attrib>0:
-                self.attrib += 0.013
-            if self.stealth>0:
-                self.stealth += 0.013
-            if self.iwo>0:
-                self.iwo += 0.013
-            if self.ddos>0:
-                self.ddos += 0.013
-            if self.destruct>0:
-                self.destruct += 0.013
-            if self.infra>0:
-                self.infra += 0.013
-            i+=1
            
 class FancyBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "FancyBear"
         self.phish = 100
         self.zeroday = 80
         self.tools = 95
@@ -359,6 +360,7 @@ class FancyBear(Russian):
 class PrimitiveBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "PrimitiveBear"
         self.phish = 90
         self.zeroday = 50
         self.tools = 95
@@ -372,6 +374,7 @@ class PrimitiveBear(Russian):
 class VenomousBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "VenomousBear"
         self.phish = 100
         self.zeroday = 80
         self.tools = 95
@@ -385,6 +388,7 @@ class VenomousBear(Russian):
 class BerserkBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "BerserkBear"
         self.phish = 100
         self.zeroday = 0
         self.tools = 50
@@ -398,6 +402,7 @@ class BerserkBear(Russian):
 class CozyBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "CozyBear"
         self.phish = 100
         self.zeroday = 75
         self.tools = 100
@@ -411,6 +416,7 @@ class CozyBear(Russian):
 class VoodooBear(Russian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "VoodooBear"
         self.phish = 100
         self.zeroday = 100
         self.tools = 50
@@ -424,6 +430,7 @@ class VoodooBear(Russian):
 class RefinedKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "RefinedKitten"
         self.phish = 40
         self.zeroday = 1
         self.tools = 50
@@ -437,6 +444,7 @@ class RefinedKitten(Iranian):
 class ImperialKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "ImperialKitten"
         self.phish = 50
         self.zeroday = 1
         self.tools = 30
@@ -450,6 +458,7 @@ class ImperialKitten(Iranian):
 class CharmingKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "CharmingKitten"
         self.phish = 50
         self.zeroday = 1
         self.tools = 30
@@ -463,6 +472,7 @@ class CharmingKitten(Iranian):
 class HelixKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "HelixKitten"
         self.phish = 60
         self.zeroday = 1
         self.tools = 40
@@ -476,6 +486,7 @@ class HelixKitten(Iranian):
 class StaticKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "StaticKitten"
         self.phish = 50
         self.zeroday = 1
         self.tools = 40
@@ -489,6 +500,7 @@ class StaticKitten(Iranian):
 class RemixKitten(Iranian):
     def __init__(self, unique_id, pos, model):
         super().__init__(unique_id, pos, model)
+        self.org = "RemixKitten"
         self.phish = 60
         self.zeroday = 1
         self.tools = 40

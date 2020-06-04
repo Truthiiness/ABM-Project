@@ -15,6 +15,7 @@ from Agent import (FancyBear, PrimitiveBear, VenomousBear, BerserkBear, CozyBear
 from Network import G
 from mesa.datacollection import DataCollector
 
+   
 class RandomActivationByOrg(RandomActivation):
 
     def __init__(self, model):
@@ -40,7 +41,7 @@ class RandomActivationByOrg(RandomActivation):
         agent_keys = list(self.agents_by_org[org].keys())
         self.model.random.shuffle(agent_keys)
         for agent_key in agent_keys:
-            self.agents_by_org[org][agent_key].step()
+            self.agents_by_org[org][agent_key].step()      
 
 class Model(Model):
     initial_FancyBear = 1
@@ -145,15 +146,10 @@ class Model(Model):
         self.running = True  
         
         self.datacollector = DataCollector(
-            agent_phish = {"Spear Phishing": lambda a: a.phish}, 
-            agent_zeroday = {"Zero Day": lambda a: a.zeroday},
-            agent_tools = {"Tool Sophistication": lambda a: a.tools}, 
-            agent_attrib = {"Attribution Obfuscation": lambda a: a.attrib},
-            agent_stealth = {"Stealth": lambda a: a.stealth}, 
-            agent_iwo = {"Information Weaponization": lambda a: a.iwo},
-            agent_ddos = {"DDoS": lambda a: a.ddos}, 
-            agent_destruct = {"Data Destruction": lambda a: a.destruct},
-            agent_infra = {"Critical Infrastructure Disruption": lambda a: a.infra})
+            agent_reporters = {"Organization": "org", "Spear Phishing": "phish", "Zero Day": "zeroday",
+            "Tool Sophistication": "tools", "Attribution Obfuscation": "attrib",
+            "Stealth": "stealth", "Information Weaponization": "iwo","DDoS": "ddos", 
+            "Data Destruction": "destruct", "Critical Infrastructure Disruption": "infra"})
         
     def step(self):       
         self.schedule.step()

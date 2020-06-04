@@ -19,5 +19,3 @@ permlist = [('IK', 'CK'), ('IK', 'HK'), ('HK', 'RFK'),('RMK', 'HK')]
 explist = [('FB', 'IK'), ('FB', 'CK'), ('FB', 'RMK')]
 G.add_edges_from(permlist)
 G.add_edges_from(explist)
-
-nx.draw(G)
