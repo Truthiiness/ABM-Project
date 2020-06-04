@@ -160,23 +160,23 @@ class Russian(Org):
         i=0
         while i<30:
             if self.phish>0:
-                self.phish += 0.014
+                self.phish += 0.013
             if self.zeroday>0:
-                self.zeroday += 0.014
+                self.zeroday += 0.013
             if self.tools>0:
-                self.tools += 0.014 
+                self.tools += 0.013
             if self.attrib>0:
-                self.attrib += 0.014
+                self.attrib += 0.013
             if self.stealth>0:
-                self.stealth += 0.014
+                self.stealth += 0.013
             if self.iwo>0:
-                self.iwo += 0.014
+                self.iwo += 0.013
             if self.ddos>0:
-                self.ddos += 0.014
+                self.ddos += 0.013
             if self.destruct>0:
-                self.destruct += 0.014
+                self.destruct += 0.013
             if self.infra>0:
-                self.infra += 0.014
+                self.infra += 0.013
             i+=1
                 
 class Iranian(Org):
@@ -324,23 +324,23 @@ class Iranian(Org):
         i=0
         while i<30:
             if self.phish>0:
-                self.phish += 0.014
+                self.phish += 0.013
             if self.zeroday>0:
-                self.zeroday += 0.014
+                self.zeroday += 0.013
             if self.tools>0:
-                self.tools += 0.014
+                self.tools += 0.013
             if self.attrib>0:
-                self.attrib += 0.014
+                self.attrib += 0.013
             if self.stealth>0:
-                self.stealth += 0.014
+                self.stealth += 0.013
             if self.iwo>0:
-                self.iwo += 0.014
+                self.iwo += 0.013
             if self.ddos>0:
-                self.ddos += 0.014
+                self.ddos += 0.013
             if self.destruct>0:
-                self.destruct += 0.014
+                self.destruct += 0.013
             if self.infra>0:
-                self.infra += 0.014
+                self.infra += 0.013
             i+=1
            
 class FancyBear(Russian):

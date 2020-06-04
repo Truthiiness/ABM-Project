@@ -14,7 +14,7 @@ from Network import G
 
 #May be replaced by identical step in Model
 model = Model(len(G.nodes()))
-for i in range(120):
+for i in range(1):
     model.step()
 
 #Still here in case I need it later, but I don't need it at the moment. The individual

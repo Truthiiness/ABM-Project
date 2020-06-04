@@ -13,6 +13,7 @@ from Agent import (FancyBear, PrimitiveBear, VenomousBear, BerserkBear, CozyBear
                    VoodooBear, RefinedKitten, ImperialKitten, CharmingKitten, 
                    HelixKitten, StaticKitten, RemixKitten)
 from Network import G
+from mesa.datacollection import DataCollector
 
 class RandomActivationByOrg(RandomActivation):
 
@@ -141,8 +142,19 @@ class Model(Model):
             self.grid.place_agent(remixkitten, 'RMK')
             self.schedule.add(remixkitten)
            
-        self.running = True
+        self.running = True  
+        
+        self.datacollector = DataCollector(
+            agent_phish = {"Spear Phishing": lambda a: a.phish}, 
+            agent_zeroday = {"Zero Day": lambda a: a.zeroday},
+            agent_tools = {"Tool Sophistication": lambda a: a.tools}, 
+            agent_attrib = {"Attribution Obfuscation": lambda a: a.attrib},
+            agent_stealth = {"Stealth": lambda a: a.stealth}, 
+            agent_iwo = {"Information Weaponization": lambda a: a.iwo},
+            agent_ddos = {"DDoS": lambda a: a.ddos}, 
+            agent_destruct = {"Data Destruction": lambda a: a.destruct},
+            agent_infra = {"Critical Infrastructure Disruption": lambda a: a.infra})
         
     def step(self):       
         self.schedule.step()
-        
+        self.datacollector.collect(self)
