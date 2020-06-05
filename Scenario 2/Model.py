@@ -9,8 +9,7 @@ from mesa import Model
 from mesa.time import RandomActivation
 from collections import defaultdict
 from mesa.space import NetworkGrid
-from Agent import (FancyBear, PrimitiveBear, VenomousBear, BerserkBear, CozyBear, 
-                   VoodooBear, RefinedKitten, ImperialKitten, CharmingKitten, 
+from Agent import (FancyBear, RefinedKitten, ImperialKitten, CharmingKitten, 
                    HelixKitten, StaticKitten, RemixKitten)
 from Network import G
 from mesa.datacollection import DataCollector
@@ -44,12 +43,7 @@ class RandomActivationByOrg(RandomActivation):
             self.agents_by_org[org][agent_key].step()      
 
 class Model(Model):
-    initial_FancyBear = 0
-    initial_PrimitiveBear = 0
-    initial_VenomousBear = 0
-    initial_BerserkBear = 0
-    initial_CozyBear = 0
-    initial_VoodooBear = 0
+    initial_FancyBear = 1
     initial_RefinedKitten = 100
     initial_ImperialKitten = 100
     initial_CharmingKitten = 100
@@ -58,20 +52,13 @@ class Model(Model):
     initial_RemixKitten = 100
 
     
-    def __init__(self, nodes, initial_FancyBear = 0, initial_PrimitiveBear = 0,
-                 initial_VenomousBear = 0, initial_BerserkBear = 0, initial_CozyBear = 0,
-                 initial_VoodooBear = 0, initial_RefinedKitten = 100, 
+    def __init__(self, nodes, initial_FancyBear = 1, initial_RefinedKitten = 100, 
                  initial_ImperialKitten = 100, initial_CharmingKitten = 100, 
                  initial_HelixKitten = 100, initial_StaticKitten = 100,
                  initial_RemixKitten = 100):
         super().__init__()
                 
         self.initial_FancyBear = initial_FancyBear
-        self.initial_PrimitiveBear = initial_PrimitiveBear
-        self.initial_VenomousBear = initial_VenomousBear
-        self.initial_BerserkBear = initial_BerserkBear
-        self.initial_CozyBear = initial_CozyBear
-        self.initial_VoodooBear = initial_VoodooBear
         self.initial_RefinedKitten = initial_RefinedKitten
         self.initial_ImperialKitten = initial_ImperialKitten
         self.initial_CharmingKitten = initial_CharmingKitten
@@ -87,31 +74,6 @@ class Model(Model):
             fancybear = FancyBear(self.next_id(), 'FB', self)
             self.grid.place_agent(fancybear, 'FB')
             self.schedule.add(fancybear)
-
-        for i in range(self.initial_PrimitiveBear):
-            primitivebear = PrimitiveBear(self.next_id(), 'PB', self)
-            self.grid.place_agent(primitivebear, 'PB')
-            self.schedule.add(primitivebear)
-
-        for i in range(self.initial_VenomousBear):
-            venomousbear = VenomousBear(self.next_id(), 'VEB', self)
-            self.grid.place_agent(venomousbear, 'VEB')
-            self.schedule.add(venomousbear)
-
-        for i in range(self.initial_BerserkBear):
-            berserkbear = BerserkBear(self.next_id(), 'BB', self)
-            self.grid.place_agent(berserkbear, 'BB')
-            self.schedule.add(berserkbear)
-
-        for i in range(self.initial_CozyBear):
-            cozybear = CozyBear(self.next_id(), 'CB', self)
-            self.grid.place_agent(cozybear, 'CB')
-            self.schedule.add(cozybear)
-
-        for i in range(self.initial_VoodooBear):
-            voodoobear = VoodooBear(self.next_id(), 'VOB', self)
-            self.grid.place_agent(voodoobear, 'VOB')
-            self.schedule.add(voodoobear)
 
         for i in range(self.initial_RefinedKitten):
             refinedkitten = RefinedKitten(self.next_id(), 'RFK', self)

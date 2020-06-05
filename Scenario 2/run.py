@@ -11,7 +11,7 @@ import pandas as pd
 
 #May be replaced by identical step in Model
 model = Model(len(G.nodes()))
-for i in range(120):
+for i in range(3650):
     model.step()
 
 traits = model.datacollector.get_agent_vars_dataframe()

@@ -44,12 +44,12 @@ class RandomActivationByOrg(RandomActivation):
             self.agents_by_org[org][agent_key].step()      
 
 class Model(Model):
-    initial_FancyBear = 0
-    initial_PrimitiveBear = 0
-    initial_VenomousBear = 0
-    initial_BerserkBear = 0
-    initial_CozyBear = 0
-    initial_VoodooBear = 0
+    initial_FancyBear = 1
+    initial_PrimitiveBear = 1
+    initial_VenomousBear = 1
+    initial_BerserkBear = 1
+    initial_CozyBear = 1
+    initial_VoodooBear = 1
     initial_RefinedKitten = 100
     initial_ImperialKitten = 100
     initial_CharmingKitten = 100
@@ -58,9 +58,9 @@ class Model(Model):
     initial_RemixKitten = 100
 
     
-    def __init__(self, nodes, initial_FancyBear = 0, initial_PrimitiveBear = 0,
-                 initial_VenomousBear = 0, initial_BerserkBear = 0, initial_CozyBear = 0,
-                 initial_VoodooBear = 0, initial_RefinedKitten = 100, 
+    def __init__(self, nodes, initial_FancyBear = 1, initial_PrimitiveBear = 1,
+                 initial_VenomousBear = 1, initial_BerserkBear = 1, initial_CozyBear = 1,
+                 initial_VoodooBear = 1, initial_RefinedKitten = 100, 
                  initial_ImperialKitten = 100, initial_CharmingKitten = 100, 
                  initial_HelixKitten = 100, initial_StaticKitten = 100,
                  initial_RemixKitten = 100):
