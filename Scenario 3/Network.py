@@ -18,8 +18,8 @@ for loc in location_list:
 permlist = [('IK', 'CK'), ('IK', 'HK'), ('HK', 'RFK'), ('RMK', 'HK')]
 explist = [('FB', 'RFK'), ('BB', 'RFK'), ('VOB','RFK'), ('PB','IK'), ('PB','CK'),
            ('PB','HK'), ('PB','SK'),('PB','RMK'), ('VEB','IK'), ('VEB','CK'),
-           ('VEB','HK'), ('VEB','SK'),('VEB','RMK'), ('CB','IK'), ('CB','CK'),
-           ('CB','HK'), ('CB','SK'),('CB','RMK')]
+           ('VEB','SK'),('VEB','RMK'), ('CB','IK'), ('CB','CK'), ('CB','HK'), 
+           ('CB','SK'),('CB','RMK')]
 
 G.add_edges_from(permlist)
 G.add_edges_from(explist)
